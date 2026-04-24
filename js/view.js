@@ -1,4 +1,5 @@
 // View: Responsável pela interface (HTML/CSS)
+//Líria Manuel
 
 class LojaView {
   constructor() {
