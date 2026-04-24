@@ -27,14 +27,6 @@ h1 {
   gap: 15px;
 }
 
-h1::before {
-  font-size: 2rem;
-}
-
-h1::after {
-  font-size: 2rem;
-}
-
 .card {
   background: white;
   border-radius: 20px;
@@ -61,10 +53,6 @@ h2 {
   border-bottom: 3px solid #e67e22;
 }
 
-h2 i {
-  font-size: 1.5rem;
-}
-
 input {
   width: 100%;
   padding: 12px 15px;
@@ -81,8 +69,17 @@ input:focus {
   box-shadow: 0 0 0 3px rgba(230, 126, 34, 0.1);
 }
 
-/* BOTÕES UNIFORMES */
-button {
+/* ============================================
+   TODOS OS BOTÕES SÃO LARANJA AGORA!
+   ============================================ */
+
+/* ESTILO ÚNICO PARA TODOS OS BOTÕES */
+button,
+#btnAdicionarProduto,
+.btn-comprar,
+#btnEncerrarCompra {
+  background: linear-gradient(135deg, #e67e22, #f39c12);
+  color: white;
   border: none;
   padding: 12px 20px;
   border-radius: 12px;
@@ -96,51 +93,37 @@ button {
   gap: 8px;
 }
 
-button:hover {
+button:hover,
+#btnAdicionarProduto:hover,
+.btn-comprar:hover,
+#btnEncerrarCompra:hover {
   transform: translateY(-2px);
   filter: brightness(105%);
+  background: linear-gradient(135deg, #d35400, #e67e22);
 }
 
-button:active {
+button:active,
+#btnAdicionarProduto:active,
+.btn-comprar:active,
+#btnEncerrarCompra:active {
   transform: translateY(0);
 }
 
-/* Botão Adicionar Produto */
-#btnAdicionarProduto {
-  background: linear-gradient(135deg, #e67e22, #f39c12);
-  color: white;
-  width: 100%;
-  font-weight: bold;
-}
-
-#btnAdicionarProduto::before {
-  font-size: 14px;
-}
-
-/* Botão Comprar */
+/* Botão Comprar - mesmo laranja, só menor */
 .btn-comprar {
-  background: linear-gradient(135deg, #3498db, #2980b9);
-  color: white;
   width: auto;
   padding: 8px 20px;
-  font-weight: 600;
 }
 
-.btn-comprar::before {
-  margin-right: 5px;
-}
-
-/* Botão Finalizar Compra */
-#btnEncerrarCompra {
-  background: linear-gradient(135deg, #27ae60, #229954);
-  color: white;
-  width: 100%;
-  font-weight: bold;
-}
-
+/* Botão Finalizar - mesmo laranja */
 #btnEncerrarCompra::before {
   content: "✅";
   margin-right: 8px;
+}
+
+/* Botão Adicionar - mesmo laranja */
+#btnAdicionarProduto {
+  width: 100%;
 }
 
 .produto-item {
